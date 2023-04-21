@@ -1,0 +1,21 @@
+{% extends 'base.twig' %}
+
+{% block title%} {{title}} {% endblock %}
+
+{% block nav%}
+<ul>
+    {% for navLink in navLinks %}
+        <li><a href={{navLink.link}}>{{navLink.text | title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block main %}
+    <h1>{{heroMessage}}</h1>
+    <h3>We do: {{services | join(', ') | title}}</h3>
+{% endblock %}
+
+{% block footer%}
+    <p>{{footer}}</p>
+{% endblock %}
+

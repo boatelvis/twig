@@ -1,0 +1,11 @@
+{% set sortedLetters = letters | sort %}
+
+<ul>
+{% for letter in sortedLetters %}
+<li>{{letter | title}}</li>
+{% endfor %}
+</ul>
+
+{% verbatim %}
+<p>{{sortedLetters | join(', ')}}</p>
+{% endverbatim %}
